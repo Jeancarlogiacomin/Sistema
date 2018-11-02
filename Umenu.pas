@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
   Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Menus;
+  Vcl.Menus, Vcl.StdCtrls;
 
 type
   TFmenu = class(TForm)
@@ -54,6 +54,7 @@ type
     HorariosPonto1: TMenuItem;
     Avisos1: TMenuItem;
     Faltas1: TMenuItem;
+    seugay: TLabel;
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);

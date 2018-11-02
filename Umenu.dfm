@@ -2,7 +2,7 @@ object Fmenu: TFmenu
   Left = 0
   Top = 0
   Caption = 'Menu'
-  ClientHeight = 510
+  ClientHeight = 490
   ClientWidth = 652
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -1516,9 +1516,22 @@ object Fmenu: TFmenu
     Width = 105
     Height = 89
   end
+  object seugay: TLabel
+    Left = 399
+    Top = 80
+    Width = 200
+    Height = 77
+    Caption = 'seugay'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -64
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object DBGrid1: TDBGrid
     Left = 32
-    Top = 256
+    Top = 241
     Width = 489
     Height = 241
     DataSource = DSatrazado
