@@ -1,0 +1,63 @@
+unit Umenu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TFmenu = class(TForm)
+    SpeedButton1: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton8: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    SpeedButton11: TSpeedButton;
+    FDQatrazado: TFDQuery;
+    DSatrazado: TDataSource;
+    DBGrid1: TDBGrid;
+    procedure SpeedButton7Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fmenu: TFmenu;
+
+implementation
+
+uses
+  Uconferencia,Uconnection,Uusuarios;
+{$R *.dfm}
+
+procedure TFmenu.FormActivate(Sender: TObject);
+begin
+  FDQatrazado.Refresh;
+end;
+
+procedure TFmenu.SpeedButton1Click(Sender: TObject);
+begin
+  Application.CreateForm(TFusuarios,Fusuarios); //cria o form
+  Fusuarios.Showmodal; //mostra o form
+  Fusuarios.Free; //libera o form da memória
+end;
+
+procedure TFmenu.SpeedButton7Click(Sender: TObject);
+begin
+  Application.CreateForm(TFconferencia,Fconferencia); //cria o form
+  Fconferencia.Showmodal; //mostra o form
+  Fconferencia.Free; //libera o form da memória
+  //INSERT INTO ponto_erros (DESC,USUARIO,DATA_PROBLEMA,HORA_PROBLEMA,RESOLVIDO) VALUES ('brululuieieieieie hue hue hue !!!',1,'01.01.2017','01:00:00',1)
+end;
+
+end.

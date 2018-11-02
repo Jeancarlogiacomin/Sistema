@@ -1,0 +1,63 @@
+unit Uerro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Buttons;
+
+type
+  TFerro = class(TForm)
+    FDQincluir: TFDQuery;
+    FDQincluirCODIGO: TLargeintField;
+    FDQincluirDESC: TStringField;
+    FDQincluirUSUARIO: TSmallintField;
+    FDQincluirRESOLVIDO: TSmallintField;
+    FDQincluirUSUARIO_RESOLVEU: TSmallintField;
+    FDQincluirMOTIVO: TStringField;
+    Label1: TLabel;
+    SBgravar: TSpeedButton;
+    SBcancelar: TSpeedButton;
+    Edit1: TEdit;
+    procedure SBcancelarClick(Sender: TObject);
+    procedure SBgravarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Ferro: TFerro;
+
+implementation
+
+{$R *.dfm}
+uses
+  Uconnection,Uerro;
+
+procedure TFerro.SBcancelarClick(Sender: TObject);
+begin
+  Ferro.Close;
+end;
+
+procedure TFerro.SBgravarClick(Sender: TObject);
+var
+  texto,usuario:string;
+begin
+  texto:= Edit1.Text;
+  usuario:= IntToStr(Uconnection.DataModule2.FDQloginCODIGO.Value);
+  FDQincluir.close;
+  FDQincluir.SQL.Clear;
+  FDQincluir.SQL.Add('INSERT INTO ponto_erros (DESC,USUARIO,RESOLVIDO) VALUES  ('''+''+texto+''+''','+usuario+',0)');
+// ShowMessage(''+FDQincluir.SQL.text+'');
+  FDQincluir.ExecSQL;
+  Showmessage('Sua duvida foi inserida com SUCESSO'+ #13 +
+              ' AGUARDAR PESSOAL DO RH ENTRAR EM CONTATO');
+end;
+
+end.

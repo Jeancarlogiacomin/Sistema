@@ -1,0 +1,77 @@
+object Ferro: TFerro
+  Left = 0
+  Top = 0
+  Caption = 'Ferro'
+  ClientHeight = 174
+  ClientWidth = 588
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 18
+    Top = 27
+    Width = 40
+    Height = 13
+    Caption = 'MOTIVO'
+    FocusControl = DBEdit1
+  end
+  object DBEdit1: TDBEdit
+    Left = 64
+    Top = 24
+    Width = 337
+    Height = 21
+    DataField = 'DESC'
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object FDQErro: TFDQuery
+    Connection = DataModule2.FDConnection
+    SQL.Strings = (
+      'select *'
+      'from ponto_erros')
+    Left = 480
+    Top = 32
+    object FDQErroCODIGO: TLargeintField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQErroDESC: TStringField
+      FieldName = 'DESC'
+      Origin = '"DESC"'
+      Required = True
+      Size = 255
+    end
+    object FDQErroUSUARIO: TSmallintField
+      FieldName = 'USUARIO'
+      Origin = 'USUARIO'
+      Required = True
+    end
+    object FDQErroRESOLVIDO: TSmallintField
+      FieldName = 'RESOLVIDO'
+      Origin = 'RESOLVIDO'
+      Required = True
+    end
+    object FDQErroUSUARIO_RESOLVEU: TSmallintField
+      FieldName = 'USUARIO_RESOLVEU'
+      Origin = 'USUARIO_RESOLVEU'
+    end
+    object FDQErroMOTIVO: TStringField
+      FieldName = 'MOTIVO'
+      Origin = 'MOTIVO'
+      Size = 255
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQErro
+    Left = 288
+    Top = 96
+  end
+end

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Tag="1" Version="4.11.13" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="3583" PreviewOptions.Zoom="1" PrintOptions.Printer="Padrão" PrintOptions.PrintOnSheet="0" ReportOptions.Author="Ernesto Tapia" ReportOptions.CreateDate="40694,3574392245" ReportOptions.Description.Text="" ReportOptions.Name="Etiquetas Polifix 10X3" ReportOptions.LastChange="40774,4022248148" ReportOptions.VersionBuild="0" ReportOptions.VersionMajor="1" ReportOptions.VersionMinor="0" ReportOptions.VersionRelease="0" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403780203546F700388000844617461736574730101063220446174615365743D22517565727950726F6475746F2220446174615365744E616D653D22517565727950726F6475746F220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000">
+    <TfrxIBOQuery Name="QueryProduto" UserName="QueryProduto" CloseDataSource="True" FieldAliases.Text="" BCDToCurrency="False" IgnoreDupParams="False" SQL.Text="select produto.id, produto.nome from produto  " PropData="05704C65667402740470546F70023C0A506172616D65746572730100"/>
+  </TfrxDataPage>
+  <TfrxReportPage Name="Page1" PaperWidth="216" PaperHeight="279" PaperSize="256" LeftMargin="3" RightMargin="3" TopMargin="12" BottomMargin="0" Columns="3" ColumnWidth="70" ColumnPositions.Text="0&#13;&#10;70&#13;&#10;140" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" Height="98,26771654" Left="0" Top="18,89765" Width="264,5671" ColumnWidth="0" ColumnGap="0" DataSet="QueryProduto" DataSetName="QueryProduto" RowCount="0">
+      <TfrxMemoView Name="Memo3" Align="baLeft" Left="0" Top="0" Width="263,05504" Height="98,26771654" ShowHint="False" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text=""/>
+      <TfrxMemoView Name="Memo1" Left="18,89765" Top="3,77953" Width="196,53556" Height="18,89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="ID - [QueryProduto.&#34;ID&#34;]"/>
+      <TfrxMemoView Name="Memo2" Left="18,89765" Top="26,45671" Width="113,3859" Height="18,89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="Produto"/>
+      <TfrxMemoView Name="QueryProdutoNOME" Left="18,89765" Top="45,35436" Width="238,11039" Height="18,89765" ShowHint="False" DataField="NOME" DataSet="QueryProduto" DataSetName="QueryProduto" Font.Charset="1" Font.Color="0" Font.Height="-12" Font.Name="Arial" Font.Style="0" ParentFont="False" WordWrap="False" Text="[QueryProduto.&#34;NOME&#34;]"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

@@ -1,0 +1,68 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 520
+  Width = 475
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=C:\Sistema\Dados\SISTEMA.FDB'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'DriverID=fB')
+    Connected = True
+    Left = 32
+    Top = 16
+  end
+  object FDQlogin: TFDQuery
+    Active = True
+    Connection = FDConnection
+    SQL.Strings = (
+      'select *'
+      'from usuarios'
+      'where nome =:nome'
+      'and senha =:senha')
+    Left = 120
+    Top = 16
+    ParamData = <
+      item
+        Name = 'NOME'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 10
+        Value = 'TESTE'
+      end
+      item
+        Name = 'SENHA'
+        DataType = ftString
+        ParamType = ptInput
+        Size = 10
+        Value = 'TESTE'
+      end>
+    object FDQloginCODIGO: TIntegerField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQloginNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 10
+    end
+    object FDQloginSENHA: TStringField
+      FieldName = 'SENHA'
+      Origin = 'SENHA'
+      Size = 10
+    end
+    object FDQloginNOMECOMPLETO: TStringField
+      FieldName = 'NOMECOMPLETO'
+      Origin = 'NOMECOMPLETO'
+      Required = True
+      Size = 30
+    end
+    object FDQloginACESSO: TSmallintField
+      FieldName = 'ACESSO'
+      Origin = 'ACESSO'
+      Required = True
+    end
+  end
+end

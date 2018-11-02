@@ -1,0 +1,143 @@
+object Frelatorios: TFrelatorios
+  Left = 0
+  Top = 0
+  Caption = 'Frelatorios'
+  ClientHeight = 518
+  ClientWidth = 982
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label3: TLabel
+    Left = 480
+    Top = 32
+    Width = 55
+    Height = 13
+    Caption = 'CAMINHO :'
+  end
+  object SBabrir: TSpeedButton
+    Left = 48
+    Top = 72
+    Width = 185
+    Height = 60
+    Caption = 'Abrir'
+    OnClick = SBabrirClick
+  end
+  object SBatualizar: TSpeedButton
+    Left = 256
+    Top = 72
+    Width = 201
+    Height = 60
+    Caption = 'Atualizar / Limpar'
+    OnClick = SBatualizarClick
+  end
+  object SBEditar: TSpeedButton
+    Left = 48
+    Top = 152
+    Width = 185
+    Height = 60
+    Caption = 'Editar'
+    OnClick = SBEditarClick
+  end
+  object SBImprimir: TSpeedButton
+    Left = 256
+    Top = 152
+    Width = 201
+    Height = 60
+    Caption = 'Imprimir'
+    OnClick = SBImprimirClick
+  end
+  object Label1: TLabel
+    Left = 64
+    Top = 32
+    Width = 90
+    Height = 13
+    Caption = 'NOME RELATORIO'
+  end
+  object FileListBox1: TFileListBox
+    Left = 480
+    Top = 72
+    Width = 401
+    Height = 185
+    ItemHeight = 13
+    Mask = '*.fr3*'
+    TabOrder = 0
+  end
+  object Editcaminho: TEdit
+    Left = 541
+    Top = 29
+    Width = 345
+    Height = 21
+    Enabled = False
+    TabOrder = 1
+    Text = '\\GIACOMIN-SERVER\Syscon\Relatorios'
+    OnChange = EditcaminhoChange
+  end
+  object ProgressBar1: TProgressBar
+    Left = 48
+    Top = 476
+    Width = 833
+    Height = 17
+    TabOrder = 2
+  end
+  object Editnome: TEdit
+    Left = 160
+    Top = 29
+    Width = 281
+    Height = 21
+    TabOrder = 3
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 920
+    Top = 40
+  end
+  object frxReport1: TfrxReport
+    Version = '6.0.10'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 43397.545763449070000000
+    ReportOptions.LastChange = 43397.545763449070000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 920
+    Top = 112
+    Datasets = <>
+    Variables = <>
+    Style = <>
+  end
+  object frxDesigner1: TfrxDesigner
+    DefaultScriptLanguage = 'PascalScript'
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = -13
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    DefaultLeftMargin = 10.000000000000000000
+    DefaultRightMargin = 10.000000000000000000
+    DefaultTopMargin = 10.000000000000000000
+    DefaultBottomMargin = 10.000000000000000000
+    DefaultPaperSize = 9
+    DefaultOrientation = poPortrait
+    GradientEnd = 11982554
+    GradientStart = clWindow
+    TemplatesExt = 'fr3'
+    Restrictions = []
+    RTLLanguage = False
+    MemoParentFont = False
+    Left = 920
+    Top = 208
+  end
+end
