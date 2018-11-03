@@ -3,7 +3,7 @@ object Frelatorios: TFrelatorios
   Top = 0
   Caption = 'Frelatorios'
   ClientHeight = 518
-  ClientWidth = 982
+  ClientWidth = 1070
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -126,12 +126,52 @@ object Frelatorios: TFrelatorios
       item
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset1'
+      end
+      item
+        DataSet = frxReport1.IBXQuery1
+        DataSetName = 'IBXQuery1'
       end>
     Variables = <>
     Style = <>
     object Data: TfrxDataPage
       Height = 1000.000000000000000000
       Width = 1000.000000000000000000
+      object IBXDatabase1: TfrxIBXDatabase
+        DatabaseName = 'C:\Sistema\Dados\SISTEMA.FDB'
+        Params.Strings = (
+          'user_name=sysdba')
+        SQLDialect = 3
+        Connected = True
+        pLeft = 144
+        pTop = 104
+      end
+      object IBXQuery1: TfrxIBXQuery
+        UserName = 'IBXQuery1'
+        CloseDataSource = True
+        FieldAliases.Strings = (
+          'CODIGO=CODIGO'
+          'NOME=NOME'
+          'SENHA=SENHA'
+          'NOMECOMPLETO=NOMECOMPLETO'
+          'ACESSO=ACESSO'
+          'ENTRADA=ENTRADA'
+          'SAIDA_ALMOCO=SAIDA_ALMOCO'
+          'ENTRADA_ALMOCO=ENTRADA_ALMOCO'
+          'SAIDA=SAIDA'
+          'ENTRADA_SABADO=ENTRADA_SABADO'
+          'SAIDA_SABADO=SAIDA_SABADO')
+        BCDToCurrency = False
+        IgnoreDupParams = False
+        Params = <>
+        SQL.Strings = (
+          
+            'select * from usuarios                                          ' +
+            '                                                 ')
+        Database = frxReport1.IBXDatabase1
+        pLeft = 240
+        pTop = 104
+        Parameters = <>
+      end
     end
     object Page1: TfrxReportPage
       PaperWidth = 210.000000000000000000
@@ -3514,7 +3554,6 @@ object Frelatorios: TFrelatorios
     end
   end
   object FDQusuario: TFDQuery
-    Active = True
     Connection = DataModule2.FDConnection
     SQL.Strings = (
       'select p.CODIGO'

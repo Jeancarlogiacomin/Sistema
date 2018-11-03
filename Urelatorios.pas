@@ -108,8 +108,8 @@ begin
     rel:= FileListBox1.FileName ;
     ShowMessage(''+rel+'');
     frxReport1.LoadFromFile(''+rel+'');
-    frxReport1.PrepareReport(True);
-  //  frxReport1.ShowReport;
+//    frxReport1.PrepareReport(True);
+//    frxReport1.ShowReport;
     frxReport1.DesignReport;
 
   end else
@@ -132,7 +132,7 @@ begin
       rel:=FileListBox1.FileName ;
       ShowMessage(''+rel+'');
       frxReport1.LoadFromFile(''+rel+'');
-      frxReport1.PrepareReport(True);
+//      frxReport1.PrepareReport(True);
       frxReport1.ShowReport;
     //  frxReport1.Report;
 
@@ -142,7 +142,7 @@ begin
     begin
       rel:= caminho;
       frxReport1.LoadFromFile(''+rel+'');
-      frxReport1.PrepareReport(True);
+//      frxReport1.PrepareReport(True);
       frxReport1.ShowReport;
       //frxReport1.Report;
     end;
@@ -153,7 +153,7 @@ end;
 procedure TFrelatorios.SBnovoClick(Sender: TObject);
 begin
     frxReport1.LoadFromFile('');
-    frxReport1.PrepareReport(True);
+//    frxReport1.PrepareReport(True);
     frxReport1.DesignReport;
 end;
 
