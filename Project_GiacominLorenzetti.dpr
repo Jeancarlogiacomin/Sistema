@@ -13,10 +13,8 @@ uses
   Uduvidas in 'Uduvidas.pas' {Fduvidas},
   Uresolvido in 'Uresolvido.pas' {Fresolvido},
   Uimportaexcel in 'Uimportaexcel.pas' {Fimportaexcel},
-  Uimportamdfe in 'Uimportamdfe.pas' {Fimportamdfe},
-  Udescarga in 'Udescarga.pas' {Fdescarga},
   Ucelular in 'Ucelular.pas' {FCelular},
-  Urelatorios in 'Urelatorios.pas' {Frelatorios};
+  Uprocessos in 'Uprocessos.pas' {Fprocessos};
 
 {$R *.res}
 
@@ -31,9 +29,8 @@ begin
   Application.CreateForm(TFduvidas, Fduvidas);
   Application.CreateForm(TFresolvido, Fresolvido);
   Application.CreateForm(TFimportaexcel, Fimportaexcel);
-  Application.CreateForm(TFimportamdfe, Fimportamdfe);
-  Application.CreateForm(TFdescarga, Fdescarga);
+  //  Application.CreateForm(TFdescarga, Fdescarga);
   Application.CreateForm(TFCelular, FCelular);
-  Application.CreateForm(TFrelatorios, Frelatorios);
+  Application.CreateForm(TFprocessos, Fprocessos);
   Application.Run;
 end.

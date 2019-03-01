@@ -2,8 +2,8 @@ object Fusuarios: TFusuarios
   Left = 0
   Top = 0
   Caption = 'Fusuarios'
-  ClientHeight = 528
-  ClientWidth = 862
+  ClientHeight = 551
+  ClientWidth = 814
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +12,7 @@ object Fusuarios: TFusuarios
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object SpeedButton1: TSpeedButton
@@ -459,7 +460,7 @@ object Fusuarios: TFusuarios
     OnClick = SpeedButton1Click
   end
   object SpeedButton3: TSpeedButton
-    Left = 103
+    Left = 111
     Top = 0
     Width = 86
     Height = 64
@@ -2171,7 +2172,7 @@ object Fusuarios: TFusuarios
     Width = 47
     Height = 13
     Caption = 'ENTRADA'
-    FocusControl = DBEdit6
+    FocusControl = DBentrada
   end
   object Label8: TLabel
     Left = 195
@@ -2314,9 +2315,9 @@ object Fusuarios: TFusuarios
     Enabled = False
     TabOrder = 6
   end
-  object DBEdit6: TDBEdit
+  object DBentrada: TDBEdit
     Left = 24
-    Top = 216
+    Top = 219
     Width = 96
     Height = 21
     DataField = 'ENTRADA'
@@ -2374,7 +2375,31 @@ object Fusuarios: TFusuarios
     Enabled = False
     TabOrder = 12
   end
+  object Edit1: TEdit
+    Left = 504
+    Top = 272
+    Width = 121
+    Height = 21
+    TabOrder = 13
+    Text = 'Edit1'
+  end
+  object DTPentrada: TDateTimePicker
+    Left = 25
+    Top = 219
+    Width = 97
+    Height = 21
+    Date = 43516.633239502310000000
+    Time = 43516.633239502310000000
+    DoubleBuffered = False
+    Enabled = False
+    Kind = dtkTime
+    ParentDoubleBuffered = False
+    TabOrder = 14
+    Visible = False
+    OnChange = DTPentradaChange
+  end
   object FDQusuario: TFDQuery
+    Active = True
     Connection = DataModule2.FDConnection
     SQL.Strings = (
       'select * '
@@ -2439,7 +2464,6 @@ object Fusuarios: TFusuarios
   end
   object DSusuarios: TDataSource
     DataSet = FDQusuario
-    OnDataChange = DSusuariosDataChange
     Left = 752
     Top = 128
   end
@@ -2458,6 +2482,7 @@ object Fusuarios: TFusuarios
     end
   end
   object FDQcodigoatual: TFDQuery
+    Active = True
     Connection = DataModule2.FDConnection
     SQL.Strings = (
       'select gen_id(GEN_USUARIO_CODIGO,0) from rdb$database')

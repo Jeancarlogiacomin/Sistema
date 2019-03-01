@@ -2,8 +2,8 @@ object FCelular: TFCelular
   Left = 0
   Top = 0
   Caption = 'FCelular'
-  ClientHeight = 242
-  ClientWidth = 527
+  ClientHeight = 265
+  ClientWidth = 588
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

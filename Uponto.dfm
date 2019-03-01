@@ -2,8 +2,8 @@ object Fponto: TFponto
   Left = 0
   Top = 0
   Caption = 'Fponto'
-  ClientHeight = 207
-  ClientWidth = 364
+  ClientHeight = 213
+  ClientWidth = 363
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

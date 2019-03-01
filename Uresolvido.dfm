@@ -3,7 +3,7 @@ object Fresolvido: TFresolvido
   Top = 0
   Caption = 'Fresolvido'
   ClientHeight = 161
-  ClientWidth = 538
+  ClientWidth = 675
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

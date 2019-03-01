@@ -3,7 +3,7 @@ object Fresolvido: TFresolvido
   Top = 0
   Caption = 'Fresolvido'
   ClientHeight = 161
-  ClientWidth = 477
+  ClientWidth = 538
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -147,6 +147,7 @@ object Fresolvido: TFresolvido
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000}
+    OnClick = SBgravarClick
   end
   object SBcancelar: TSpeedButton
     Left = 280
@@ -275,6 +276,7 @@ object Fresolvido: TFresolvido
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000}
+    OnClick = SBcancelarClick
   end
   object Edit1: TEdit
     Left = 85
@@ -284,13 +286,12 @@ object Fresolvido: TFresolvido
     TabOrder = 0
   end
   object FDQajustar: TFDQuery
-    Active = True
     Connection = DataModule2.FDConnection
     SQL.Strings = (
       'select *'
       'from ponto_erros')
-    Left = 504
-    Top = 96
+    Left = 488
+    Top = 48
     object FDQajustarCODIGO: TLargeintField
       FieldName = 'CODIGO'
       Origin = 'CODIGO'

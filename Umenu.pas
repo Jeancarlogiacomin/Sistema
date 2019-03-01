@@ -19,7 +19,7 @@ type
     SpeedButton7: TSpeedButton;
     SpeedButton8: TSpeedButton;
     SpeedButton10: TSpeedButton;
-    SpeedButton11: TSpeedButton;
+    SBprocessos: TSpeedButton;
     FDQatrazado: TFDQuery;
     DSatrazado: TDataSource;
     DBGrid1: TDBGrid;
@@ -54,7 +54,6 @@ type
     HorariosPonto1: TMenuItem;
     Avisos1: TMenuItem;
     Faltas1: TMenuItem;
-    seugay: TLabel;
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
@@ -68,6 +67,9 @@ type
     procedure HorariosPonto1Click(Sender: TObject);
     procedure PapelDeSaida2Click(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
+    procedure SBprocessosClick(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,13 +82,18 @@ var
 implementation
 
 uses
-  Uconferencia,Uconnection,Uusuarios,Uduvidas,Uimportaexcel,Uimportamdfe,
-  Udescarga,Urelatorios;
+  Uconferencia,Uconnection,Uusuarios,Uduvidas,
+  Uimportaexcel,Uprocessos;
 {$R *.dfm}
 
 procedure TFmenu.FormActivate(Sender: TObject);
 begin
   FDQatrazado.Refresh;
+end;
+
+procedure TFmenu.FormShow(Sender: TObject);
+begin
+  FDQatrazado.Open();
 end;
 
 procedure TFmenu.HorariosPonto1Click(Sender: TObject);
@@ -105,16 +112,16 @@ end;
 
 procedure TFmenu.ImportarNFEparaomanifesto1Click(Sender: TObject);
 begin
-  Application.CreateForm(TFimportamdfe,Fimportamdfe); //cria o form
-  Fimportamdfe.Showmodal; //mostra o form
-  Fimportamdfe.Free; //libera o form da memória
+//////////////////////////////////////INATIVO///////////////////////////
+//  Application.CreateForm(TFimportamdfe,Fimportamdfe); //cria o form
+//  Fimportamdfe.Showmodal; //mostra o form
+//  Fimportamdfe.Free; //libera o form da memória
+//////////////////////////////////////INATIVO///////////////////////////
 end;
 
 procedure TFmenu.PapelDeSaida2Click(Sender: TObject);
 begin
-  Application.CreateForm(TFdescarga,Fdescarga); //cria o form
-  Fdescarga.Showmodal; //mostra o form
-  Fdescarga.Free; //libera o form da memória
+    ShowMessage('vai toma no cu');
 end;
 
 procedure TFmenu.Sair1Click(Sender: TObject);
@@ -127,6 +134,13 @@ begin
   Application.CreateForm(TFimportaexcel,Fimportaexcel); //cria o form
   Fimportaexcel.Showmodal; //mostra o form
   Fimportaexcel.Free; //libera o form da memória
+end;
+
+procedure TFmenu.SBprocessosClick(Sender: TObject);
+begin
+  Application.CreateForm(TFprocessos,Fprocessos); //cria o form
+  Fprocessos.Showmodal; //mostra o form
+  Fprocessos.Free; //libera o form da memória
 end;
 
 procedure TFmenu.SpeedButton1Click(Sender: TObject);
@@ -161,15 +175,26 @@ end;
 
 procedure TFmenu.SpeedButton3Click(Sender: TObject);
 begin
-  Application.CreateForm(TFimportamdfe,Fimportamdfe); //cria o form
-  Fimportamdfe.Showmodal; //mostra o form
-  Fimportamdfe.Free; //libera o form da memória
+//////////////////////////////////////INATIVO///////////////////////////
+//  Application.CreateForm(TFimportamdfe,Fimportamdfe); //cria o form
+//  Fimportamdfe.Showmodal; //mostra o form
+//  Fimportamdfe.Free; //libera o form da memória
+//////////////////////////////////////INATIVO///////////////////////////
+end;
+
+procedure TFmenu.SpeedButton4Click(Sender: TObject);
+begin
+  Application.CreateForm(TFprocessos,Fprocessos); //cria o form
+  Fprocessos.Showmodal; //mostra o form
+  Fprocessos.Free; //libera o form da memória
 end;
 
 procedure TFmenu.SpeedButton5Click(Sender: TObject);
 begin
-  Application.CreateForm(TFrelatorios,Frelatorios); //cria o form
-  Frelatorios.Showmodal; //mostra o form
-  Frelatorios.Free; //libera o form da memória
+//////////////////////////////////INATIVO////////////////////////
+//  Application.CreateForm(TFrelatorios,Frelatorios); //cria o form
+//  Frelatorios.Showmodal; //mostra o form
+//  Frelatorios.Free; //libera o form da memória
+//////////////////////////////////INATIVO////////////////////////
 end;
 end.

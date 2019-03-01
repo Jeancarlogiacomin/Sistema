@@ -1,29 +1,29 @@
 object DataModule2: TDataModule2
   OldCreateOrder = False
-  Height = 520
-  Width = 475
+  Height = 131
+  Width = 190
   object FDConnection: TFDConnection
     Params.Strings = (
-      'Database=d:\Syscon\Dados\SISTEMA.FDB'
+      'Database=C:\\Syscon\Dados\SISTEMA.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
-      'DriverID=fB'
-      'Server=GIACOMIN-SERVER'
-      'Protocol=TCPIP')
+      'Server=servidor'
+      'Protocol=TCPIP'
+      'DriverID=fB')
     Connected = True
+    LoginPrompt = False
     Left = 32
-    Top = 24
+    Top = 32
   end
   object FDQlogin: TFDQuery
-    Active = True
     Connection = FDConnection
     SQL.Strings = (
       'select *'
       'from usuarios'
       'where nome =:nome'
       'and senha =:senha')
-    Left = 120
-    Top = 16
+    Left = 112
+    Top = 32
     ParamData = <
       item
         Name = 'NOME'

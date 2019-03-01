@@ -3,7 +3,7 @@ object Fduvidas: TFduvidas
   Top = 0
   Caption = 'Fduvidas'
   ClientHeight = 468
-  ClientWidth = 557
+  ClientWidth = 740
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

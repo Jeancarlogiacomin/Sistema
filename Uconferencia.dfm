@@ -3,7 +3,7 @@ object Fconferencia: TFconferencia
   Top = 0
   Caption = 'Fconferencia'
   ClientHeight = 500
-  ClientWidth = 498
+  ClientWidth = 655
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -388,6 +388,7 @@ object Fconferencia: TFconferencia
     TabOrder = 5
   end
   object FDQusuario: TFDQuery
+    Active = True
     Connection = DataModule2.FDConnection
     SQL.Strings = (
       'select p.CODIGO'

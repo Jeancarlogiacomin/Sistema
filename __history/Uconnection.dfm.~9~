@@ -4,38 +4,39 @@ object DataModule2: TDataModule2
   Width = 475
   object FDConnection: TFDConnection
     Params.Strings = (
-      'Database=C:\Sistema\Dados\SISTEMA.FDB'
+      'Database=C:\\Syscon\Dados\SISTEMA.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
+      'Server=servidor'
+      'Protocol=TCPIP'
       'DriverID=fB')
     Connected = True
     Left = 32
-    Top = 16
+    Top = 32
   end
   object FDQlogin: TFDQuery
-    Active = True
     Connection = FDConnection
     SQL.Strings = (
       'select *'
       'from usuarios'
       'where nome =:nome'
       'and senha =:senha')
-    Left = 120
-    Top = 16
+    Left = 112
+    Top = 32
     ParamData = <
       item
         Name = 'NOME'
         DataType = ftString
         ParamType = ptInput
         Size = 10
-        Value = 'teste'
+        Value = 'TESTE'
       end
       item
         Name = 'SENHA'
         DataType = ftString
         ParamType = ptInput
         Size = 10
-        Value = 'teste'
+        Value = 'TESTE'
       end>
     object FDQloginCODIGO: TIntegerField
       FieldName = 'CODIGO'
@@ -63,6 +64,34 @@ object DataModule2: TDataModule2
       FieldName = 'ACESSO'
       Origin = 'ACESSO'
       Required = True
+    end
+    object FDQloginENTRADA: TTimeField
+      FieldName = 'ENTRADA'
+      Origin = 'ENTRADA'
+      Required = True
+    end
+    object FDQloginSAIDA_ALMOCO: TTimeField
+      FieldName = 'SAIDA_ALMOCO'
+      Origin = 'SAIDA_ALMOCO'
+      Required = True
+    end
+    object FDQloginENTRADA_ALMOCO: TTimeField
+      FieldName = 'ENTRADA_ALMOCO'
+      Origin = 'ENTRADA_ALMOCO'
+      Required = True
+    end
+    object FDQloginSAIDA: TTimeField
+      FieldName = 'SAIDA'
+      Origin = 'SAIDA'
+      Required = True
+    end
+    object FDQloginENTRADA_SABADO: TTimeField
+      FieldName = 'ENTRADA_SABADO'
+      Origin = 'ENTRADA_SABADO'
+    end
+    object FDQloginSAIDA_SABADO: TTimeField
+      FieldName = 'SAIDA_SABADO'
+      Origin = 'SAIDA_SABADO'
     end
   end
 end

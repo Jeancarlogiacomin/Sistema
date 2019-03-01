@@ -149,20 +149,12 @@
             <Form>Fimportaexcel</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Uimportamdfe.pas">
-            <Form>Fimportamdfe</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Udescarga.pas">
-            <Form>Fdescarga</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Ucelular.pas">
             <Form>FCelular</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Urelatorios.pas">
-            <Form>Frelatorios</Form>
+        <DCCReference Include="Uprocessos.pas">
+            <Form>Fprocessos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
