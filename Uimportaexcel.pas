@@ -16,7 +16,6 @@ type
   TFimportaexcel = class(TForm)
     SpeedButton1: TSpeedButton;
     SpeedButton3: TSpeedButton;
-    ImportExcel1: TImportExcel;
     StringGrid1: TStringGrid;
     OpenDialog1: TOpenDialog;
     ProgressBar1: TProgressBar;
@@ -237,7 +236,7 @@ end;
 
 procedure TFimportaexcel.SBexportarClick(Sender: TObject);
 begin
-   ImportExcel1.ExportarParaExcel(CDSimportar, 'teste');
+   //ImportExcel1.ExportarParaExcel(CDSimportar, 'teste');
 end;
 
 procedure TFimportaexcel.SpeedButton1Click(Sender: TObject);
@@ -247,8 +246,8 @@ begin
   if OpenDialog1.Execute then
     begin
       vfile := OpenDialog1.FileName;
-      ImportExcel1.ExcelFile:= vfile;
-      ImportExcel1.ExcelParaStringGrid(StringGrid1, ProgressBar1);
+      //ImportExcel1.ExcelFile:= vfile;
+      //ImportExcel1.ExcelParaStringGrid(StringGrid1, ProgressBar1);
 
     end;
 

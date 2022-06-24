@@ -87,10 +87,6 @@
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
   end
-  object ImportExcel1: TImportExcel
-    Left = 541
-    Top = 584
-  end
   object OpenDialog1: TOpenDialog
     Left = 445
     Top = 584
@@ -100,10 +96,7 @@
       'Database=C:\Syscon\Dados\DADOS.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
-      'Protocol=TCPIP'
-      'Server=servidor'
       'DriverID=FB')
-    Connected = True
     Left = 440
     Top = 640
   end
